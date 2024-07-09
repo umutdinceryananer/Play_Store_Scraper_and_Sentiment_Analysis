@@ -115,5 +115,5 @@ sentiment_histogram.html: Histogram chart created with data obtained from commen
 ### Communication:
 If you have any questions or feedback, I would be very happy if you choose to reach out to me.
 
-Email: Umutdncr@gmail.com
+Email: umutdncr@gmail.com
 LinkedIn: https://www.linkedin.com/in/umut-yananer/
