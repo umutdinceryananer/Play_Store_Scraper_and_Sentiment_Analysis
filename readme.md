@@ -43,7 +43,8 @@ Başka uygulamalar için scraper.py dosyası içinde 9. satırda yer alan Produc
 
 Bu komut, önce scraper.py dosyasını çalıştırarak yorumları çeker ve sentiment analizini yapar, ardından sentiment_analysis.py dosyasını çalıştırarak yorumlardan elde edilen verilerle bir histogram grafiği oluşturur.
 
-Grafik, sentiment_histogram.html dosyasına kaydedilecektir.
+>[!NOTE]
+>Grafik, sentiment_histogram.html dosyası olarak kaydedilecektir.
 
 ### Çıktılar:
 wonder_reviews_raw.json: Çekilen ve sentiment analizi yapılan ham yorumlar.
@@ -51,7 +52,7 @@ wonder_reviews_processed.json: İşlenmiş ve sentiment analiz sonuçları ayrı
 sentiment_histogram.html: Yorumlardan elde edilen verilerle oluşturulan histogram grafiği.
 
 ### İletişim:
-Eğer bir sorunuz veya geri bildiriminiz varsa, lütfen bana ulaşın:
+Eğer bir sorunuz veya geri bildiriminiz varsa, bana ulaşmayı tercih etmeniz beni çok mutlu eder.
 
 E-posta: umutdncr@gmail.com
 LinkedIn: https://www.linkedin.com/in/umut-yananer/
