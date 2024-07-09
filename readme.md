@@ -1,39 +1,41 @@
-# Play Store Uygulamaları için Yorumlarda Sentiment Analiz Yazılımı
+# Google Play Store Uygulama Yorumları için Duygusallık Analizi
 
 Bu proje, Google Play Store'da yer alan uygulamalar için yapılan son 1000 İngilizce yorumu çekip, bu yorumları sentiment analizinden geçirerek bir histogram grafiği oluşturur.
+> Yapılan yorum sayısı programda 1000 olarak kabul edilmiştir ama modelin sonuç süresi göz önüne alınarak sayı arttırılabilir.
 
-Sentiment Analysis için kullanılan model SiEBERT - English-Language Sentiment Classification, (https://huggingface.co/siebert/sentiment-roberta-large-english)
+Sentiment Analysis için Kullanılan Model: [SiEBERT - English-Language Sentiment Classification](https://huggingface.co/siebert/sentiment-roberta-large-english)
 
 Sentiment Analiz modeli için SiEBERT seçilmiş olmasının sebebi İngilizce metin değerlendirmelerinde en tutarlı model olması ve Türkçe Sentiment Analizi 
 için geliştirilen modellerin henüz yeterince tutarlı sonuçlar verememesidir.
 
-Gereksinimler:
-1. Python 3.x
-2. Gerekli Python kütüphaneleri:
-    2.1 google-play-scraper
-    2.2 transformers
-    2.3 pandas
-    2.4 emoji
-    2.5 re
-    2.6 plotly
+## Gereksinimler:
+* Python 3.x
+  - Gerekli Python kütüphaneleri:
+    - google-play-scraper
+    - transformers
+    - pandas
+    - emoji
+    - re
+    - plotly
 
 Gerekli kütüphaneleri yüklemek için aşağıdaki komutu çalıştırın:
+```
 pip install -r requirements.txt
+```
 
-Kurulum:
-!pip install -r requirements.txt
-
-Dosya Açıklamaları:
-*** scraper.py ***
+### Dosya Açıklamaları:
+** scraper.py **
 Bu dosya, Google Play Store'dan yorumları toplar ve sentiment analizini yapar. Çıktı olarak wonder_reviews_raw.json dosyasını oluşturur.
 
-*** sentiment_analysis.py ***
+** sentiment_analysis.py **
 Bu dosya, scraper.py tarafından oluşturulan JSON dosyasını kullanarak veriyi işler ve grafik oluşturur. Çıktı olarak sentiment_histogram.html dosyasını oluşturur.
 
-Kullanım:
+### Kullanım:
 Tüm işlemleri tek bir komutla çalıştırmak için aşağıdaki komutu kullanın:
+```
 !python run_all.py
-Bu komut sonrası ortalama olarak 7 dakikalık bir run süresi sonucu çıktıya ulaşılabiliyor.
+```
+Bu komut sonrası 1000 yorum için ortalama olarak **7 dakikalık bir bekleme süresi** sonucu çıktılara ulaşılabiliyor.
 
 Program örnek olarak Codeway tarafından geliştirilen Wonder AI uygulamasını kullanıyor. 
 Başka uygulamalar için scraper.py dosyası içinde 9. satırda yer alan Product ID değiştirilebilir. -> 'com.codeway.wonder'
@@ -43,12 +45,12 @@ Bu komut, önce scraper.py dosyasını çalıştırarak yorumları çeker ve sen
 
 Grafik, sentiment_histogram.html dosyasına kaydedilecektir.
 
-Çıktılar:
+### Çıktılar:
 wonder_reviews_raw.json: Çekilen ve sentiment analizi yapılan ham yorumlar.
 wonder_reviews_processed.json: İşlenmiş ve sentiment analiz sonuçları ayrıştırılmış yorumlar.
 sentiment_histogram.html: Yorumlardan elde edilen verilerle oluşturulan histogram grafiği.
 
-İletişim:
+### İletişim:
 Eğer bir sorunuz veya geri bildiriminiz varsa, lütfen bana ulaşın:
 
 E-posta: umutdncr@gmail.com
